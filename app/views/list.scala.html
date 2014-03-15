@@ -1,5 +1,4 @@
-@(news: List[String])
-
+@(items: List[(String,String)])
 
 <!DOCTYPE html>
 <html>
@@ -26,5 +25,13 @@
     	</div>
   	</div>
   </nav>
+
+  @items.map {item =>
+    <div>
+      <p>@{item._1}</p>
+      <p>Description: @{item._2}
+    </p>
+  }
+
   </body>
 </html>
